@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="睡眠社区 - 与大家分享您的睡眠故事">
+        <meta name="author" content="">
+
+        <title>睡眠社区</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+    </head>
+    
+    <body id="top">
+        <main>
+            <!-- 导航栏 -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi-moon-stars"></i>
+                        <span>睡眠管理</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#login" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="science-center.html">睡眠知识</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="sleep-tracker.html">睡眠记录</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="assessment.html">睡眠评估</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="advice.html">个性化建议</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="profile.html">用户中心</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll active" href="community.html">睡眠社区</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#login" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 页面头部 -->
+            <header class="site-header d-flex flex-column justify-content-center align-items-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">睡眠社区</li>
+                                </ol>
+                            </nav>
+                            <h2 class="text-white">睡眠社区</h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 睡眠打卡 -->
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="custom-block bg-white shadow-lg p-4">
+                                <h3 class="mb-4">今日睡眠打卡</h3>
+                                <form id="checkin-form">
+                                    <div class="mb-3">
+                                        <label class="form-label">昨晚睡眠质量</label>
+                                        <select class="form-select" id="sleep-quality">
+                                            <option value="5">非常好</option>
+                                            <option value="4">不错</option>
+                                            <option value="3">一般</option>
+                                            <option value="2">较差</option>
+                                            <option value="1">很差</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">今日心情</label>
+                                        <textarea class="form-control" rows="3" placeholder="分享您今天的心情..."></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn custom-btn">提交打卡</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 话题讨论 -->
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <h3 class="mb-4">热门话题</h3>
+                        </div>
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="custom-block bg-white shadow-lg p-4">
+                                <div id="topics-container">
+                                    <!-- 话题内容将通过JS动态加载 -->
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="#new-topic" class="btn custom-btn">发起新话题</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 专家专栏 -->
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <h3 class="mb-4">专家专栏</h3>
+                        </div>
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="custom-block bg-white shadow-lg p-4">
+                                <div id="expert-articles">
+                                    <!-- 专家文章将通过JS动态加载 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 音频分享 -->
+            <section class="section-padding section-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <h3 class="mb-4">音频分享</h3>
+                        </div>
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="custom-block bg-white shadow-lg p-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="custom-block bg-light shadow-sm p-4">
+                                            <h5>上传音频</h5>
+                                            <form id="audio-upload-form">
+                                                <div class="mb-3">
+                                                    <input type="file" class="form-control" accept="audio/*">
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn custom-btn">上传</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="custom-block bg-light shadow-sm p-4">
+                                            <h5>推荐音频</h5>
+                                            <div id="audio-list">
+                                                <!-- 音频列表将通过JS动态加载 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chatbot -->
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <h3 class="mb-4">智能睡眠教练</h3>
+                        </div>
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="custom-block bg-white shadow-lg p-4">
+                                <div id="chatbot-container">
+                                    <div class="chat-window">
+                                        <!-- 聊天内容将通过JS动态加载 -->
+                                    </div>
+                                    <form id="chatbot-form" class="mt-3">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="输入您的问题...">
+                                            <button class="btn custom-btn" type="submit">发送</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi-moon-stars"></i>
+                            <span>睡眠管理</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <p class="copyright-text text-center">© 2025 睡眠管理系统. 保留所有权利。</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript 文件 -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

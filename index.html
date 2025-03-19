@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="睡眠管理系统 - 让每一个夜晚更安心">
+        <meta name="author" content="">
+
+        <title>睡眠管理系统</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+    </head>
+    
+    <body id="top">
+        <main>
+            <!-- 导航栏 -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="bi-moon-stars"></i>
+                        <span>睡眠管理</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#login" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="index.html">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="science-center.html">睡眠知识</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="sleep-tracker.html">睡眠记录</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="assessment.html">睡眠评估</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="advice.html">个性化建议</a>
+                            </li>
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#login" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 首页内容 -->
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h1 class="text-white text-center">让每一个夜晚更安心</h1>
+                            <h6 class="text-center">您的专属睡眠管理系统</h6>
+
+                            <!-- 登录/注册入口 -->
+                            <div class="d-flex justify-content-center mt-4">
+                                <a href="#login" class="btn btn-primary me-3">登录</a>
+                                <a href="#register" class="btn btn-outline-light">注册</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 快速导航 -->
+            <section class="featured-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="custom-block bg-white shadow-lg text-center">
+                                <a href="sleep-tracker.html">
+                                    <i class="bi-clock-history display-4 mb-3 text-primary"></i>
+                                    <h5>睡眠记录</h5>
+                                    <p>记录您的睡眠数据</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="custom-block bg-white shadow-lg text-center">
+                                <a href="assessment.html">
+                                    <i class="bi-bar-chart-line display-4 mb-3 text-primary"></i>
+                                    <h5>睡眠评估</h5>
+                                    <p>了解您的睡眠质量</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="custom-block bg-white shadow-lg text-center">
+                                <a href="advice.html">
+                                    <i class="bi-lightbulb display-4 mb-3 text-primary"></i>
+                                    <h5>个性化建议</h5>
+                                    <p>获取改善睡眠的建议</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 每日小贴士 -->
+            <section class="section-padding bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mb-5">
+                            <h2>每日睡眠小贴士</h2>
+                        </div>
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="custom-block bg-white shadow-lg p-4">
+                                <div id="daily-tip-content">
+                                    <!-- 小贴士内容将通过JS动态加载 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 已登录用户看板 -->
+            <section class="section-padding" id="dashboard">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center mb-5">
+                            <h2>睡眠看板</h2>
+                            <p class="text-muted">请登录后查看您的睡眠数据</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <!-- 睡眠趋势图 -->
+                                <div class="col-lg-6 col-12 mb-4">
+                                    <div class="custom-block bg-white shadow-lg">
+                                        <h5 class="mb-3">睡眠趋势</h5>
+                                        <div id="sleep-trend-chart" style="height: 300px;">
+                                            <!-- 图表将通过JS渲染 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 睡眠评分 -->
+                                <div class="col-lg-6 col-12 mb-4">
+                                    <div class="custom-block bg-white shadow-lg">
+                                        <h5 class="mb-3">睡眠评分</h5>
+                                        <div class="d-flex align-items-center">
+                                            <div class="display-4 me-3">8.2</div>
+                                            <div>
+                                                <div class="text-muted">过去7天平均</div>
+                                                <div class="text-success">↑ 比上周提高5%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <i class="bi-moon-stars"></i>
+                            <span>睡眠管理</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <p class="copyright-text text-center">© 2025 睡眠管理系统. 保留所有权利。</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript 文件 -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>
